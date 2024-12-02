@@ -201,7 +201,7 @@ body {
 .skils.container {
     text-align: center;
     align-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
     /* Adjust vertical spacing */
 }
 
@@ -375,8 +375,8 @@ a:hover {
     justify-content: space-between;
     padding: 60px 20px;
     background-color: #fff;
-    border-top: 5px ; /* Decorative border */
-    border-bottom: 5px ;
+    border-top: 50px ; /* Decorative border */
+    border-bottom: 50px ;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .projects-heading {
@@ -404,7 +404,7 @@ a:hover {
 }
 
 .project-card {
-    flex: 0 0 calc(33.33% - 20px);
+    flex: 0 0 48%; ;
     /* Adjusted width to fit three cards in a row */
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -417,10 +417,11 @@ a:hover {
 
 .project-card img {
     /* Ensures the image doesn't exceed the container's width */
-    height: auto;
-    width: 500px;
+    height: 300px;
+    width:600px;
     /* Maintains the aspect ratio of the image */
     display: block;
+    padding:40px;
     /* Ensures proper spacing around the image */
 }
 
@@ -428,21 +429,21 @@ a:hover {
     transform: translateY(-5px);
 }
 
-.project-card img {
-    width: 300px;
-    height: 300px;
-    border-bottom: 1px solid #ddd;
-}
 
 .project-info {
     padding: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color:rgb(14, 13, 13);
+    background-color: #f9f9f9;
 }
 
 .project-info h3 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 30px;
-    color: #333;
+    color:brown;
 }
 
 .project-info p {
@@ -451,12 +452,13 @@ a:hover {
 
 .project-info a {
     display: inline-block;
-    background-color: green;
+    background-color:burlywood;
     color: #fff;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 8px 16px; 
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    
 }
 
 .project-info a:hover {
@@ -466,6 +468,27 @@ a:hover {
 .projects .container h2 {
     width: 100%;
     text-align: center;
+}
+.project-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+
+    
+}
+
+.project-description .title {
+    font-size: 1.1rem;
+    color:#333;
+    font-weight: bold;
+}
+
+.project-description span {
+    display: inline-block;
+    margin-left: 10px;
+    color: #555;
 }
 
 
@@ -598,139 +621,228 @@ body {
     100% { width: 50px; }
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+/* General Section Styling */
+.certificates-section {
+    background-color: #f4f7f6;
+    padding: 50px 0;
+    text-align: center;
 }
 
+/* Heading Styling */
+.certificates-heading {
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Grid Layout for Certificates */
+.certificates-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Individual Certificate Card Styling */
+.certificate-column {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.certificate-column:hover {
+    transform: translateY(-5px);
+}
+
+/* Certificate Card Header (Logo & Title) */
+.certificate-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.certificate-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Text Styling for Details */
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Show Credential Button Styling */
+.show-credential {
+    display: inline-block;
+    background-color: #a0a4a8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.show-credential:hover {
+    background-color: #787e84;
+}
+
+/* Udemy Platform Text Styling */
+.certificates-column p b {
+    font-weight: bold;
+}
+
+/* General section styling */
+.training-section, .certificates-section {
+    background-color: #f4f7f6;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Heading styling */
+.training-heading, .certificates-heading {
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Grid Layout for Training and Certificates */
+.training-row, .certificates-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+.udemy {
+    color: rgb(94, 0, 128);  /* Udemy platform in green */
+    font-weight: bold;
+}
+/* Column styling for training and certificates */
+.training-column, .certificate-column {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.training-column:hover, .certificate-column:hover {
+    transform: translateY(-5px);
+    color: #007bff;
+}
+.training-heading {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    color: #ff6f61; /* Highlight color */
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+/* Styling for headings inside columns */
+h3 {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling for details */
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+
+/* Main Section Styling */
+/* Main Section Styling */
+.contact-section {
+    background-color: #f4f7f6; /* Light background color for elegance */
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Heading */
+.contact-heading {
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Grid Layout for Contact Info */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible columns */
+    gap: 30px; /* Space between items */
+    justify-items: center;
+}
+
+/* Individual Contact Item */
 .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    width: 20%;
-    
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; /* Space inside each contact item */
+    transition: transform 0.3s, color 0.3s;
 }
 
-.contact-item1 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0px;
-    width:20%;
-    
-  
-    
+/* Hover Effects */
+.contact-item:hover {
+    transform: translateY(-5px);
+    color: #007bff; /* Change text color on hover */
 }
 
-
+/* Contact Logo */
 .contact-logo {
-    width: 50px; /* Adjust logo size */
+    width: 50px;
     height: 50px;
-    margin-right: 15px;
-    transition: transform 0.3s;
-    
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
 .contact-logo:hover {
-    transform: rotate(15deg);
+    transform: scale(1.1); /* Slight scale effect on hover */
 }
 
+/* Contact Text */
 .contact-text {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    color: #333;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    color:red;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
-.contact-text:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
+
 .contact-text a {
-    font-size: 1.2em;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    color:gray;
+    color: #007bff; /* Blue color for links */
     text-decoration: none;
-   
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-
-
-
-
-/* Media Query for Tablets */
-@media screen and (max-width: 768px) {
-    .home .container,
-    .projects .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .home .container .left-section,
-    .home .container .right-section {
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .project-card {
-        flex: 0 0 45%;
-    }
-
-    .fixed-header nav ul li {
-        margin-right: 15px;
-    }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-    .home .container .left-section,
-    .home .container .right-section {
-        height: auto;
-        width: 100%;
-        padding: 0;
-        margin-bottom: 20px;
-    }
-
-    .hire-me-btn {
-        width: 80%;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card {
-        flex: 0 0 100%;
-    }
-
-    .fixed-header {
-        height: auto;
-        padding: 10px;
-    }
-
-    .fixed-header nav ul {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .fixed-header nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .fixed-header nav ul li:last-child {
-        margin-bottom: 0;
-    }
-
-    .sd-name h4 {
-        font-size: 1.5em;
-    }
+.contact-text a:hover {
+    color: #0056b3; /* Darker blue on hover */
 }
